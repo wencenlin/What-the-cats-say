@@ -43,7 +43,7 @@ The initial state is set to `user`.
             
 	    * Reply: "是遇到敵人?處在陌生環境?"
 	       
-	       * 之後輸入二者之一
+	    * 之後輸入二者之一
 		
 	* Input: "低吼"
 	
