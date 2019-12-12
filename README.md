@@ -21,9 +21,7 @@ The initial state is set to `user`.
             
 	    * 進入`choose`開始輸入貓叫聲
       
-* choose
-
-輸入貓叫聲後，會有一段關於此叫聲的描述
+* choose ( 輸入貓叫聲後，會有一段關於此叫聲的描述 )
 
 	* Input: "呼嚕呼嚕"
             
