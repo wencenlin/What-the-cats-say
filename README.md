@@ -1,10 +1,13 @@
 # What-the-cats-say
 
 Template Code for TOC Project 2019
+
 A LINE bot based on a finite state machine
 
  ### Prerequisite
+ 
 * Python 3
+
 * HTTPS Server
 
 ## Finite State Machine
@@ -31,7 +34,9 @@ The initial state is set to `user`.
      
         * Input: "Miaow~"
 	
+	
 	* Input: "咯咯"
+	
 	
 	* Input: "嘶嘶"
             
@@ -41,9 +46,12 @@ The initial state is set to `user`.
 		
 	* Input: "低吼"
 	
+	
 	* Input: "低鳴"
 	
+	
 	* Input: "大聲尖叫"
+	
 	
 * Input: "貓咪說什麼?"
 
