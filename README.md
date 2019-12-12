@@ -32,7 +32,8 @@ The initial state is set to `user`.
                 
 		* 之後輸入三者之一
      
-        * Input: "Miaow~"
+        
+	* Input: "Miaow~"
 	
 	
 	* Input: "咯咯"
@@ -55,6 +56,6 @@ The initial state is set to `user`.
 	
 * Input: "貓咪說什麼?"
 
-擬人化的翻譯叫聲
+     * 擬人化的翻譯叫聲
 	
       
