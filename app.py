@@ -42,7 +42,7 @@ machine = TocMachine(
         {"trigger": "advance","source": "nervous1","dest": "nervous2","conditions": "is_going_to_nervous2",},
         {"trigger": "advance","source": "enemy1","dest": "enemy2","conditions": "is_going_to_enemy2",},
         {"trigger": "advance","source": "new1","dest": "new2","conditions": "is_going_to_new2",},
-        {"trigger": "go_back", "source": [ "hulu", "Miaow", "ke", "ss", "ho", "ou", "y", "watch1", "act1","threat1", "protect1", "bloom1","kitty2", "flighty2", "nervous2", "enemy2", "new2"], "dest": "user"},
+        {"trigger": "go_back", "source": [  "watch1", "act1","threat1", "protect1", "bloom1","kitty2", "flighty2", "nervous2", "enemy2", "new2"], "dest": "user"},
 
     ],
     initial="user",
@@ -68,34 +68,7 @@ line_bot_api = LineBotApi(channel_access_token)
 parser = WebhookParser(channel_secret)
 
 
-# 監聽所有來自 /callback 的 Post Request
-@app.route("/callback", methods=["POST"])
-def callback():
-    signature = request.headers["X-Line-Signature"]
-    # get request body as text
-    body = request.get_data(as_text=True)
-    app.logger.info("Request body: " + body)
-
-    # handle webhook body
-    try:
-        events = parser.parse(body, signature)
-    except InvalidSignatureError:
-        abort(400)
-
-    # if event is MessageEvent and message is TextMessage, then echo text
-    for event in events:
-        if not isinstance(event, MessageEvent):
-            continue
-        if not isinstance(event.message, TextMessage):
-            continue
-
-        line_bot_api.reply_message(
-            event.reply_token, TextSendMessage(text=event.message.text)
-        )
-
-    return "OK"
-
-
+# 監聽所有來自 /webhook 的 Post Request
 # line bot route
 @app.route("/webhook", methods=["POST"])
 def webhook_handler():
